@@ -14,7 +14,7 @@ module "networking" {
   cidr_private_subnet  = var.cidr_private_subnet
 }
 
-module "security_group" {
+/*module "security_group" {
   source                     = "./security-groups"
   ec2_sg_name                = "SG for EC2 to enable SSH(22) and HTTP(80)"
   vpc_id                     = module.networking.dev_proj_1_vpc_id
@@ -85,4 +85,4 @@ module "rds_db_instance" {
   mysql_username       = "dbuser"
   mysql_password       = "dbpassword"
   mysql_dbname         = "devprojdb"
-}
+}/*
